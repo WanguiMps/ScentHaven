@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Scent Haven</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <style>
+        /* General styling for sections */
+ .section {
+     padding: 50px 0; /* Adjust as needed */
+     background-color: #f2f2f2; /* Default background color */
+     margin-bottom: -20px; /* Negative margin to reduce spacing between sections */
+ }
+ 
+ .section:first-child {
+     margin-top: -20px; /* Adjust the top margin of the first section */
+ }
+ 
+ .section:last-child {
+     margin-bottom: 0; /* Remove negative margin from the last section */
+ }
+ 
+ .section .container {
+     position: relative;
+     z-index: 1; /* Ensure content appears above background */
+ }
+ 
+ .section:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 20px; /* Adjust height of the section break */
+     background-color: #fff; /* Background color of the section break */
+     z-index: 0; /* Ensure section break is behind content */
+ }
+ 
+ .section:after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 20px; /* Adjust height of the section break */
+     background-color: #fff; /* Background color of the section break */
+     z-index: 0; /* Ensure section break is behind content */
+ }
+ 
+         .women-item-carousel .item .thumb img {
+             width: 100%;
+             height: 300px;
+             object-fit: cover;
+         }
+         .women-item-carousel .item .hover-content ul {
+             list-style: none;
+             padding: 0;
+             margin: 0;
+             display: flex;
+             justify-content: center;
+         }
+         .women-item-carousel .item .hover-content ul li {
+             margin: 0 5px;
+         }
+         .women-item-carousel .item .hover-content ul li a {
+             color: #333;
+             font-size: 18px;
+         }
+         .women-item-carousel .item .down-content h4 {
+             font-size: 20px;
+             margin-top: 15px;
+             color: #ff6f61;
+         }
+         .women-item-carousel .item .down-content span {
+             font-size: 18px;
+             color: #333;
+         }
+         .women-item-carousel .item .down-content .stars {
+             list-style: none;
+             padding: 0;
+             margin: 10px 0 0;
+             display: flex;
+             justify-content: center;
+         }
+         .women-item-carousel .item .down-content .stars li {
+             margin-right: 5px;
+         }
+         .women-item-carousel .item .down-content .stars li i {
+             color: #f8b400;
+         }
+         .section-heading h2 {
+             color: #ff6f61;
+         }
+         .section-heading span {
+             color: #333;
+         }
+         /* CSS for animations */
+ .animated-button {
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: #833AB4;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 5px;
+     transition: all 0.3s ease;
+ }
+ 
+ .animated-button:hover {
+     background-color: #6e2e9e;
+     transform: translateY(-2px);
+ }
+ 
+ .thumb {
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .thumb:hover .inner-content {
+     opacity: 1;
+     transform: translateY(0);
+ }
+ 
+ .inner-content {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     opacity: 0;
+     transition: all 0.3s ease;
+ }
+ 
+ .hover-content {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.7);
+     opacity: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     transition: all 0.3s ease;
+ }
+ 
+ .hover-content:hover {
+     opacity: 1;
+ }
+ /* CSS for animations */
+ .men-item-carousel .item {
+     margin: 0 15px;
+     text-align: center;
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .men-item-carousel .item .thumb {
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .men-item-carousel .item .thumb img {
+     transition: transform 0.3s ease;
+ }
+ 
+ .men-item-carousel .item .thumb:hover img {
+     transform: scale(1.1);
+ }
+ 
+ .men-item-carousel .item .down-content {
+     background-color: rgba(0, 0, 0, 0.7);
+     padding: 20px;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     transform: translateY(100%);
+     transition: transform 0.3s ease;
+ }
+ 
+ .men-item-carousel .item:hover .down-content {
+     transform: translateY(0);
+ }
+ 
+ .men-item-carousel .item .down-content h4,
+ .men-item-carousel .item .down-content span {
+     color: #fff;
+ }
+ 
+ .men-item-carousel .item .stars {
+     list-style: none;
+     padding: 0;
+     margin: 10px 0 0;
+ }
+ 
+ .men-item-carousel .item .stars li {
+     display: inline-block;
+     margin-right: 5px;
+     color: #ffc107; /* Yellow color for stars */
+ }
+ .men-item-carousel .item .thumb img {
+             width: 100%;
+             height: 300px;
+             object-fit: cover;
+         }
+         .men-item-carousel .item .hover-content ul {
+             list-style: none;
+             padding: 0;
+             margin: 0;
+             display: flex;
+             justify-content: center;
+         }
+         .men-item-carousel .item .hover-content ul li {
+             margin: 0 5px;
+         }
+         .men-item-carousel .item .hover-content ul li a {
+             color: #333;
+             font-size: 18px;
+         }
+         .men-item-carousel .item .down-content h4 {
+             font-size: 20px;
+             margin-top: 15px;
+         }
+         .men-item-carousel .item .down-content span {
+             font-size: 18px;
+             color: #555;
+         }
+         .men-item-carousel .item .down-content .stars {
+             list-style: none;
+             padding: 0;
+             margin: 10px 0 0;
+             display: flex;
+             justify-content: center;
+         }
+         .men-item-carousel .item .down-content .stars li {
+             margin-right: 5px;
+         }
+         .men-item-carousel .item .down-content .stars li i {
+             color: #f8b400;
+         }
+         /* CSS for animations */
+ .women-item-carousel .item {
+     margin: 0 15px;
+     text-align: center;
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .women-item-carousel .item .thumb {
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .women-item-carousel .item .thumb img {
+     transition: transform 0.3s ease;
+ }
+ 
+ .women-item-carousel .item .thumb:hover img {
+     transform: scale(1.1);
+ }
+ 
+ .women-item-carousel .item .down-content {
+     background-color: rgba(0, 0, 0, 0.7);
+     padding: 20px;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     transform: translateY(100%);
+     transition: transform 0.3s ease;
+ }
+ 
+ .women-item-carousel .item:hover .down-content {
+     transform: translateY(0);
+ }
+ 
+ .women-item-carousel .item .down-content h4,
+ .women-item-carousel .item .down-content span {
+     color: #fff;
+ }
+ 
+ .women-item-carousel .item .stars {
+     list-style: none;
+     padding: 0;
+     margin: 10px 0 0;
+ }
+ 
+ .women-item-carousel .item .stars li {
+     display: inline-block;
+     margin-right: 5px;
+     color: #ffc107; /* Yellow color for stars */
+ }
+ /* Styling for Testimonials and Blog sections */
+ #testimonials, #blog {
+     padding: 50px 0; /* Adjust padding as needed */
+     background-color: #f2f2f2; /* Testimonials section background color */
+ }
+ 
+ #blog {
+     background-color: #fff; /* Blog section background color */
+ }
+ 
+ /* Testimonial item animation */
+ .testimonial-item, .blog-item {
+     position: relative;
+     overflow: hidden;
+     border-radius: 10px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+ }
+ 
+ .testimonial-item:hover, .blog-item:hover {
+     transform: translateY(-5px);
+ }
+ 
+ /* Testimonial item image */
+ .testimonial-item .thumb img, .blog-item .thumb img {
+     width: 100%;
+     height: auto;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+ }
+ 
+ /* Testimonial item content */
+ .testimonial-item .down-content, .blog-item .down-content {
+     padding: 20px;
+     background-color: #fff;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+ 
+ /* Testimonial item text */
+ .testimonial-item p, .blog-item p {
+     font-size: 16px;
+     line-height: 1.6;
+     color: #555;
+ }
+ 
+ /* Testimonial item name and designation */
+ .testimonial-item h4, .blog-item h4 {
+     margin-top: 10px;
+     font-size: 18px;
+     font-weight: bold;
+ }
+ 
+ .testimonial-item span, .blog-item span {
+     display: block;
+     font-size: 14px;
+     color: #0D2946;
+     margin-top: 5px;
+ }
+ /* General section styling */
+ .section {
+     padding: 80px 0; /* Adjust padding as needed */
+ }
+ 
+ /* Testimonials section specific styling */
+ #testimonials {
+     background-color: #E6E6E6; /* Light gray background */
+ }
+ 
+ /* Blog section specific styling */
+ #blog {
+     background-color: #E6E6E6; /* White background */
+ }
+ 
+ /* Testimonial item and blog item styling */
+ .testimonial-item, .blog-item {
+     position: relative;
+     overflow: hidden;
+     border-radius: 10px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+     margin-bottom: 30px;
+ }
+ 
+ .testimonial-item:hover, .blog-item:hover {
+     transform: translateY(-5px);
+ }
+ 
+ .testimonial-item .thumb img, .blog-item .thumb img {
+     width: 100%;
+     height: auto;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+ }
+ 
+ .testimonial-item .down-content, .blog-item .down-content {
+     padding: 20px;
+     background-color: #333; /* White background for content */
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+ 
+ .testimonial-item p, .blog-item p {
+     font-size: 16px;
+     line-height: 1.6;
+     color: #666666; /* Darker gray text color */
+ }
+ 
+ .testimonial-item h4, .blog-item h4 {
+     font-size: 18px;
+     font-weight: bold;
+     margin-top: 10px;
+     color: #333333; /* Dark text color */
+ }
+ 
+ .testimonial-item span, .blog-item span {
+     display: block;
+     font-size: 14px;
+     color: #999999; /* Light gray text color */
+     margin-top: 5px;
+ }
+ 
+ 
+ 
+ 
+     </style>
+    
+<!--
+
+TemplateMo 571 Hexashop
+
+https://templatemo.com/tm-571-hexashop
+           
+-->
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.jpg" style="max-width: 150px; max-height: 80px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">Men's</a></li>
+                            <li class="scroll-to-section"><a href="#women">Women's</a></li>
+                            <li class="scroll-to-section"><a href="#Blog">Blog</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="single-product.html">Single Product</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li>
+                           
+                              
+                                    
+                                   
+                              
+                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                            <li class="scroll-to-section"><a  class="fa fa-shopping-cart"href="cart.html">cart</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <body>
+      <!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner" id="top" style="background-color: #000;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="left-content">
+                    <div class="thumb">
+                        <div class="inner-content">
+                            <h4>We Are Scent Haven</h4>
+                            <span>Awesome, clean &amp; scents from us your little Haven</span>
+                            <div class="main-border-button">
+                                <a href="#" class="animated-button">Purchase Now!</a>
+                            </div>
+                        </div>
+                        <img src="assets/images/smell.jpeg" alt="Main Banner Image" class="img-fluid" style="width: 100%; height: 427px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="right-content">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="right-first-image">
+                                <div class="thumb">
+                                    <div class="inner-content">
+                                        <h4>Women</h4>
+                                        <span>Best Perfumes For Women</span>
+                                    </div>
+                                    <div class="hover-content">
+                                        <div class="inner">
+                                            <h4>Women</h4>
+                                            <p>Enchant the senses, embrace your essence.</p>
+                                            <div class="main-border-button">
+                                                <a href="women.html" class="animated-button">Discover More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/baner-right-image-01.jpg" alt="Women's Perfumes" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="right-first-image">
+                                <div class="thumb">
+                                    <div class="inner-content">
+                                        <h4>Men</h4>
+                                        <span>Best Perfumes For Men</span>
+                                    </div>
+                                    <div class="hover-content">
+                                        <div class="inner">
+                                            <h4>Men</h4>
+                                            <p>Elevate your presence, leave a lasting impression—wear a scent that defines your distinction.</p>
+                                            <div class="main-border-button">
+                                                <a href="men.html" class="animated-button">Discover More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/man.jpeg" alt="Men's Perfumes" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="right-first-image">
+                                <div class="thumb">
+                                    <div class="inner-content">
+                                        <h4>Blog</h4>
+                                        <span>See what others think</span>
+                                    </div>
+                                    <div class="hover-content">
+                                        <div class="inner">
+                                            <h4>Blog</h4>
+                                            <p>Discover the Essence of Elegance: Testimonials from Our Valued Customers.</p>
+                                            <div class="main-border-button">
+                                                <li class="scroll-to-section"><a href="#Blog">Discover More</a></li>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/blog.jpeg" alt="Blog" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="right-first-image">
+                                <div class="thumb">
+                                    <div class="inner-content">
+                                        <h4>Special Offers</h4>
+                                        <span>Do not miss out!!</span>
+                                    </div>
+                                    <div class="hover-content">
+                                        <div class="inner">
+                                            <h4>Special Offers</h4>
+                                            <p>Enjoy exclusive discounts and special offers on our luxurious fragrances—shop now and indulge in your perfect scent at unbeatable prices!</p>
+                                            <div class="main-border-button">
+                                                <a href="special.html" class="animated-button">Discover More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/special.jpeg" alt="Special Offers" class="img-fluid" style="width: 100%; height: 200px; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+
+    
+<!-- ***** Men Area Starts ***** -->
+<section class="section" id="men" style="background-color: #162517; padding: 50px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2 style="color: #fff;">Latest Men's Perfumes</h2>
+                    <span style="color: #fff;">Details to details is what makes Scent Haven different from the other themes.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="men-item-carousel">
+                    <div class="owl-men-item owl-carousel">
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <img src="assets\images\Al Haramain - Amber Oud.jpeg" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>Al Haramain - Amber Oud</h4>
+                                <span style="color: #fff;">KSh 6,000</span>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <img src="assets\images\Asad.jpeg" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>Asad</h4>
+                                <span style="color: #fff;">KSh 7,500</span>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <img src="assets\images\Badee Al Oud.jpeg " alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>Badee Al Oud</h4>
+                                <span style="color: #fff;">KSh 5000</span>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Men Area Ends ***** -->
+
+<!-- ***** Women Area Starts ***** -->
+<section class="section" id="women" style="background-color: #c77490; padding: 50px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2 style="color: #fff;">Latest Women's Perfumes</h2>
+                    <span style="color: #fff;">Details to details is what makes ScentHaven different from the other themes.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="women-item-carousel">
+                    <div class="owl-women-item owl-carousel">
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <img src="assets\images\yara.jpg" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>Yara</h4>
+                                <span style="color: #fff;">KSh 7,500</span>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <img src="assets\images\PARIS CORNER QISSA PINK 100ML.webp" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>Paris Corner Qissa Pink</h4>
+                                <span style="color: #fff;">KSh 10,000</span>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <img src="assets\images\PURE OUDI - EAU DE PARFUM - 100ML SPRAY BY ARD AL ZAAFARAN.webp" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>PURE OUDI - EAU DE PARFUM</h4>
+                                <span style="color: #fff;">KSh 8,500</span>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Women Area Ends ***** -->
+
+ <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-heading {
+            margin-bottom: 40px;
+        }
+        .section-heading h2 {
+            color: #ff6f61;
+        }
+        .section-heading span {
+            color: #666;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .testimonial-item,
+        .blog-item {
+            background: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .testimonial-item .thumb img,
+        .blog-item .thumb img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .testimonial-item .down-content,
+        .blog-item .down-content {
+            padding: 20px;
+        }
+        .testimonial-item h4,
+        .blog-item h4 {
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+        .testimonial-item p,
+        .blog-item p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .blog-item a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <!-- ***** Testimonials Area Starts ***** -->
+<section class="section" id="Blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2>Testimonials</h2>
+                    <span>Check out what our customers are saying about us!</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="testimonial-item">
+                    <div class="thumb">
+                        <img src="assets/images/test.jpeg" alt="Maria Wanjiru Situma">
+                    </div>
+                    <div class="down-content">
+                        <p>"Scent Haven has completely transformed my fragrance collection. I am getting compliments everywhere I go, and it's opening up new prospects everywhere. From casual outings to formal events, their scents have become my signature. The variety is astounding, allowing me to match my scent with my mood, whether it's fresh and floral for daytime or deep and sensual for the evening. Would highly reccomend scent haven for great scents .Smelling good comes with a confidence boost!"</p>
+                        <h4>Maria Wanjiru Situma</h4>
+                        <span>Customer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="testimonial-item">
+                    <div class="thumb">
+                        <img src="assets/images/testte.jpeg" alt="Thompson Wafula">
+                    </div>
+                    <div class="down-content">
+                        <p>"I've never received so many compliments on my scent before. I used to have a deep concern about my sweat; 'Wafula wa jasho' became my alias. That's harsh, and it hurt so much that I had to change. Now they call me 'Wafula mtamu wama scents.' Scent Haven's selection is top-notch, and their customer service is exceptional. Thanks to their amazing range, I've finally found fragrances that truly complement me and boost my confidence every day. I feel like a whole new person!"</p>
+                        <h4>Thompson Wafula</h4>
+                        <span>Client</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Testimonials Area Ends ***** -->
+
+<!-- ***** Blog Area Starts ***** -->
+<section class="section" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2>From Our Blog</h2>
+                    <span>Discover the latest trends and tips in the world of fragrances.</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="thumb">
+                        <img src="assets/images/blog1.jpeg" alt="Blog Image">
+                    </div>
+                    <div class="down-content">
+                        <h4>The Essence of Elegance</h4>
+                        <p>Explore how fragrances can define your personality and enhance your presence.Welcome All</p>
+                        <a href="blog-details.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="thumb">
+                        <img src="assets/images/blog2.jpeg" alt="Blog Image">
+                    </div>
+                    <div class="down-content">
+                        <h4>Top Picks for 2024</h4>
+                        <p>Discover the top fragrances that are making waves this year. From floral to woody, we've got you covered.</p>
+                        <a href="blog-details.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="thumb">
+                        <img src="assets/images/KHAMRAH QAHWA LATTAFA PERFUMES UNISEX 100ML.webp" alt="Blog Image">
+                    </div>
+                    <div class="down-content">
+                        <h4>Customer Favorites</h4>
+                        <p>Read reviews and testimonials from our customers who have found their signature scents with us.</p>
+                        <a href="blog-details.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Blog Area Ends ***** -->
+
+
+
+   <!-- ***** Explore Area Starts ***** -->
+<section class="section" id="explore" style="padding: 50px 0; background-color: #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="left-content" style="padding-right: 30px;">
+                    <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px;">Discover Our Scents</h2>
+                    <span style="display: block; font-size: 18px; margin-bottom: 20px;">Explore a wide range of fragrances meticulously crafted for every occasion.</span>
+                    <div class="quote" style="margin-bottom: 20px;">
+                        <i class="fa fa-quote-left" style="font-size: 24px; color: #888;"></i>
+                        <p style="display: inline; font-size: 18px; margin-left: 10px;">Indulge in our exquisite scents and elevate your senses.</p>
+                    </div>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Experience luxury like never before with Scent Haven's exclusive collection of perfumes, body splashes, antiperspirants, and roll-ons. Our products are designed to provide you with confidence and sophistication, no matter where you are.</p>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 30px;">If our scents captivate your senses, please consider supporting us by making a purchase. Share the joy of Scent Haven with your loved ones and let them experience the magic too.</p>
+                    <div class="main-border-button">
+                        <a href="products.html" style="display: inline-block; padding: 10px 20px; background-color: #333; color: #fff; text-decoration: none; border-radius: 5px;">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="right-content">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="item" style="margin-bottom: 30px; text-align: center;">
+                                <img src="assets/images/perfumes.jpeg" alt="Perfumes" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 10px;">
+                                <div class="item-content">
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Perfumes</h4>
+                                    <span style="font-size: 14px; color: #888;">Latest Collection</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="item" style="margin-bottom: 30px; text-align: center;">
+                                <img src="assets/images/bodysplash.jpeg" alt="Body Splashes" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 10px;">
+                                <div class="item-content">
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Body Splashes</h4>
+                                    <span style="font-size: 14px; color: #888;">Refreshing Scents</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="item" style="margin-bottom: 30px; text-align: center;">
+                                <img src="assets/images/anti.jpeg" alt="Antiperspirants" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 10px;">
+                                <div class="item-content">
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Antiperspirants</h4>
+                                    <span style="font-size: 14px; color: #888;">All-Day Protection</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="item" style="margin-bottom: 30px; text-align: center;">
+                                <img src="assets/images/roll.jpeg" alt="Roll-Ons" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 10px;">
+                                <div class="item-content">
+                                    <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Roll-Ons</h4>
+                                    <span style="font-size: 14px; color: #888;">Convenient Application</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Explore Area Ends ***** -->
+
+ <!-- ***** Social Area Starts ***** -->
+<section class="section" id="social" style="padding: 50px 0; background-color: #f2f2f2;">
+    <div class="container">
+        <div class="row" style="text-align: center; margin-top: 30px;">
+            <div class="col-lg-12">
+                <h3 style="font-size: 28px; font-weight: bold; margin-bottom: 20px;">Follow Us on Instagram</h3>
+                <a href="https://www.instagram.com/scent_haven.ke?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" style="display: inline-block; padding: 10px 20px; background-color: #833AB4; color: #fff; text-decoration: none; border-radius: 5px;">@scent_haven.ke</a>
+            </div>
+        </div>
+        
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-lg-12">
+                <div class="video-container" style="position: relative; padding-bottom: 40%; height: 0; overflow: hidden; max-width: 70%; margin: 0 auto; background: #000; border-radius: 10px;">
+                    <video controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px;">
+                        <source src="assets/images/advert.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Social Area Ends ***** -->
+
+<!-- ***** Subscribe Area Starts ***** -->
+<div class="subscribe">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="section-heading">
+                    <h2>Subscribe to Our Newsletter for Exclusive Offers</h2>
+                    <span>Stay updated with our latest scents and special discounts.</span>
+                </div>
+                <form id="subscribe" action="" method="get">
+                    <div class="row">
+                      <div class="col-lg-5">
+                        <fieldset>
+                          <input name="name" type="text" id="name" placeholder="Your Name" required="">
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-5">
+                        <fieldset>
+                          <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-2">
+                        <fieldset>
+                          <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i> Subscribe</button>
+                        </fieldset>
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li>Store Location:<br><span>Eastleigh, Nairobi, Kenya</span></li>
+                            <li>Phone:<br><span>+254 758638778</span></li>
+                            <li>Office Location:Eastleigh<br><span>Nairobi </span></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>Work Hours:<br><span>09:00 AM - 8:00 PM Daily</span></li>
+                            <li>Email:<br><span>scenthaven@gmail.com</span></li>
+                            <li>Social Media:<br><span> <a href="https://www.instagram.com/scent_haven.ke?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==">Instagram</a>, <a href="#">Tiktok</a>, <a href="#">LinkedIn</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Subscribe Area Ends ***** -->
+
+<!-- ***** Footer Start ***** -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="first-item">
+                    <div class="logo">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.jpg" style="max-width: 150px; max-height: 80px;">
+                        </a>
+                    </div>
+                    <ul>
+                        <li><a href="#">Eastleigh, Nairobi, Kenya</a></li>
+                        <li><a href="#">scenthaven@gmail.com</a></li>
+                        <li><a href="#">+254 758638778</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h4>Shop Categories</h4>
+                <ul>
+                    <li><a href="men.html">Men's Scents</a></li>
+                    <li><a href="women.html">Women's Scents</a></li>
+                    <li><a href="special.html">Special Offers</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h4>Help &amp; Information</h4>
+                <ul>
+                    <li><a href="FAQS.html">FAQs</a></li>
+                    <li><a href="delivery.html">Deliveries</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <div class="under-footer">
+                    <p>Copyright © 2024 Scent Haven. All Rights Reserved.
+                    
+                    <ul>
+                       
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/scent_haven.ke?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ***** Footer End ***** -->
+<!-- jQuery -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/accordions.js"></script>
+<script src="assets/js/datepicker.js"></script>
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script> 
+<script src="assets/js/slick.js"></script> 
+<script src="assets/js/lightbox.js"></script> 
+<script src="assets/js/isotope.js"></script> 
+
+<!-- Global Init -->
+<script src="assets/js/custom.js"></script>
+
+<script>
+
+    $(function() {
+        var selectedClass = "";
+        $("p").click(function(){
+        selectedClass = $(this).attr("data-rel");
+        $("#portfolio").fadeTo(50, 0.1);
+            $("#portfolio div").not("."+selectedClass).fadeOut();
+        setTimeout(function() {
+          $("."+selectedClass).fadeIn();
+          $("#portfolio").fadeTo(50, 1);
+        }, 500);
+            
+        });
+    });
+
+</script>
+
+</body>
+</html>

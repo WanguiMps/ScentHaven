@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <title>Scent - Product Detail Page</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <style>
+        /* General styling for sections */
+        .section {
+            padding: 80px 0; /* Adjust padding as needed */
+            background-color: #f9f9f9; /* Light gray background for sections */
+        }
+
+        .section:first-child {
+            margin-top: -20px; /* Adjust the top margin of the first section */
+        }
+
+        .section:last-child {
+            margin-bottom: 0; /* Remove negative margin from the last section */
+        }
+
+        .section .container {
+            position: relative;
+            z-index: 1; /* Ensure content appears above background */
+        }
+
+        .section:before,
+        .section:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 20px; /* Adjust height of the section break */
+            background-color: #fff; /* Background color of the section break */
+            z-index: 0; /* Ensure section break is behind content */
+        }
+
+        .section:before {
+            top: 0;
+        }
+
+        .section:after {
+            bottom: 0;
+        }
+
+        /* Team section */
+        .team-item .thumb img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-item .thumb .hover-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .team-item .thumb:hover .hover-content {
+            opacity: 1;
+        }
+
+        .team-item .thumb .hover-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .team-item .thumb .hover-content ul li {
+            margin: 0 5px;
+        }
+
+        .team-item .thumb .hover-content ul li a {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .team-item .down-content {
+            text-align: center;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-item .down-content h4 {
+            font-size: 20px;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .team-item .down-content span {
+            font-size: 18px;
+            color: #777;
+        }
+
+        /* Section heading */
+        .section-heading h2 {
+            color: #ff6f61;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading span {
+            color: #333;
+            font-size: 16px;
+            display: block;
+        }
+
+        /* Button styling */
+        .animated-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .animated-button:hover {
+            background-color: #e55c54;
+            transform: translateY(-2px);
+        }
+
+        /* Carousel item styling */
+        .item-carousel .item {
+            margin: 0 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-carousel .item .thumb {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-carousel .item .thumb img {
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: 300px; /* Ensuring the same size for all images */
+            object-fit: cover;
+        }
+
+        .item-carousel .item .thumb:hover img {
+            transform: scale(1.1);
+        }
+
+        .item-carousel .item .down-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .item-carousel .item:hover .down-content {
+            transform: translateY(0);
+        }
+
+        .item-carousel .item .down-content h4,
+        .item-carousel .item .down-content span {
+            color: #fff;
+        }
+
+        .item-carousel .item .stars {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .item-carousel .item .stars li {
+            display: inline-block;
+            margin-right: 5px;
+            color: #ffc107; /* Yellow color for stars */
+        }
+
+        /* Testimonials and Blog sections */
+        #testimonials, #blog {
+            padding: 50px 0; /* Adjust padding as needed */
+            background-color: #fff; /* Background color */
+        }
+
+        #testimonials {
+            background-color: #e6e6e6; /* Light gray background */
+        }
+
+        #blog {
+            background-color: #f2f2f2; /* Light gray background */
+        }
+
+        /* Testimonial item and blog item styling */
+        .testimonial-item, .blog-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-item:hover, .blog-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-item .thumb img, .blog-item .thumb img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .testimonial-item .down-content, .blog-item .down-content {
+            padding: 20px;
+            background-color: #fff;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .testimonial-item p, .blog-item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .testimonial-item h4, .blog-item h4 {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .testimonial-item span, .blog-item span {
+            display: block;
+            font-size: 14px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .team-item, .testimonial-item, .blog-item, .section-heading h2, .animated-button {
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        /* Updated colors for better appearance */
+        .section {
+            background-color: #fafafa; /* Light gray background for better contrast */
+        }
+
+        .section-heading h2 {
+            color: #333; /* Darker color for better contrast */
+        }
+
+        .section-heading span {
+            color: #666; /* Lighter color for subheading */
+        }
+
+        .animated-button {
+            background-color: #333; /* Darker button color */
+        }
+
+        .animated-button:hover {
+            background-color: #555; /* Slightly lighter on hover */
+        }
+
+        .item-carousel .item .down-content {
+            background-color: rgba(51, 51, 51, 0.9); /* Darker background for better readability */
+        }
+
+        .testimonial-item .down-content, .blog-item .down-content {
+            background-color: #f9f9f9; /* Light background for content */
+        }
+
+        .testimonial-item p, .blog-item p {
+            color: #333; /* Darker text for better readability */
+        }
+
+        .testimonial-item h4, .blog-item h4 {
+            color: #ff6f61; /* Accent color for headings */
+        }
+
+        .testimonial-item span, .blog-item span {
+            color: #666; /* Lighter color for subheading */
+        }
+    </style>
+</head>
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Header content -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Single Product Page</h2>
+                        <span>Scent Haven & Smell Heavenly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+    <!-- ***** Product Area Starts ***** -->
+    <section class="section" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="left-images">
+                        <img src="assets/images/single-product-01.jpg" alt="">
+                        <img src="assets/images/single-product-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="right-content">
+                        <h4>Spray Lattafa Mayar 100 ml</h4>
+                        <span class="price">7500</span>
+                        <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+                        <span>Experience the luxurious scent of Mayar. Perfect for any occasion.</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i><p>Customers love the captivating scent of Mayar. Try it today!</p>
+                        </div>
+                        <div class="quantity-content">
+                            <div class="left-content">
+                                <h6>No. of Orders</h6>
+                            </div>
+                            <div class="right-content">
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus">
+                                    <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                                    <input type="button" value="+" class="plus">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total: 7500.00</h4>
+                            <div class="main-border-button"><a href="#" onclick="addToCart()">Add To Cart</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Product Area Ends ***** -->
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- Footer content -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <!-- Your custom JavaScript -->
+    <script>
+        // Function to handle adding items to the cart
+        function addToCart() {
+            // Get product details (you can enhance this with more details)
+            var productName = document.querySelector('.right-content h4').textContent;
+            var productPrice = parseFloat(document.querySelector('.right-content .price').textContent);
+            var quantity = parseInt(document.querySelector('.quantity .qty').value);
+            // Calculate total price for the product
+            var totalPrice = productPrice * quantity;
+            // Add item to the cart
+            var cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity,
+                total: totalPrice
+            };
+            // Check if cart exists in localStorage
+            if (localStorage.getItem('cart') === null) {
+                var cart = [];
+            } else {
+                // Get existing cart items
+                var cart = JSON.parse(localStorage.getItem('cart'));
+            }
+            // Add item to the cart
+            cart.push(cartItem);
+            // Save cart back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // Update cart count (optional)
+            updateCartCount();
+            // Optionally, display a confirmation message
+            alert('Item added to cart!');
+        }
+        // Function to update cart count
+        function updateCartCount() {
+            var cartItems = JSON.parse(localStorage.getItem('cart'));
+            var cartCount = cartItems ? cartItems.length : 0;
+            document.getElementById('cart-count').innerText = cartCount;
+        }
+        // Call updateCartCount on page load
+        updateCartCount();
+    </script>
+</body>
+</html>
